@@ -52,4 +52,8 @@ puts ("\nSecond item of the list: #{grocery_list[1]}")
  #...display sorted list with asterisk
  disp_grocery(sorted_list)
 
- 
+#.....delete salmon from the list 
+grocery_list.delete("salmon")
+
+
+disp_grocery(grocery_list)
