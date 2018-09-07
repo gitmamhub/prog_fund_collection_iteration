@@ -12,7 +12,7 @@ student_list = {
  def disp_students( students_hash)
 
           students_hash.each do |key,value|
-            puts ("#{key}: #{value} students")
+            puts ("#{key}: #{value} ")
           end
  end
 
@@ -47,3 +47,33 @@ disp_students(student_list)
 puts "\n"
 student_add(student_list)
 disp_students(student_list)
+
+##..........deleting second cohort..
+
+puts "After removing cohort2 \n"
+student_list.delete(:cohort2)
+disp_students(student_list)
+
+#....total number of students calculation
+#this function returns the number of students
+def total_students( students_hash)
+          st_counter =0
+         students_hash.each do |key,value|
+              st_counter += value
+           #puts ("#{key}: #{value} students")
+         end
+         return st_counter
+end
+
+puts ("\n\nTotal number of student(s) : #{total_students(student_list)}\n\n")
+
+#......staff list
+
+staff_list = {
+              :cohort1 => 4,
+              :cohort2 => 6,
+              :cohort3 => 1,
+              :cohort4 => 3
+           }
+
+disp_students(staff_list)
