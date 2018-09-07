@@ -14,8 +14,11 @@ student_list = {
           students_hash.each do |key,value|
             puts ("#{key}: #{value} students")
           end
-
-
  end
 
+disp_students(student_list)
+
+#......adding one cohort ...
+
+student_list[:cohort4] = 43
 disp_students(student_list)
